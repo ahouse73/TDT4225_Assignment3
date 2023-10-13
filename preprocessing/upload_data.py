@@ -51,7 +51,6 @@ def create_trackpoint_table():
     cursor.execute(query)
 
 def get_all_user_data(data_path):
-    global dataset_base_path
     # create for each user entry in list to insert them all in once
     all_users = os.listdir(data_path)
     # transform it in tuple with (id, has_labels) set has_labels to False for all
@@ -111,7 +110,6 @@ def get_labels_as_df(file_path):
     return temp
 
 if __name__ == '__main__':
-
     connection = DbConnector(HOST=config('HOST'), DATABASE=config('DATABASE'), USER=config('USER'), PASSWORD=config('PASSWORD'))
     db_connection = connection.db_connection
     cursor = connection.cursor

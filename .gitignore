@@ -3,3 +3,4 @@
 __pycache__/*
 preprocessing/dataset
 *.pyc
+.vscode/settings.json
